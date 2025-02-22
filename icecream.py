@@ -36,12 +36,10 @@ def predict_data(data):
 
 def main():
     st.title('ICE-CREAM Prediction')
-    temp = st.slider('Temperature (°C)', -4.662263, 4.899032, 0.0, 0.1)
-    ice = st.slider('Ice Cream Sales (units)', 0.328626, 41.842986, 0.0, 0.5)
-    
+    temp = st.slider('Temperature (°C)', -4.662263, 4.899032, 0.0)
+        
     user_data = {
         'Temperature (°C)' : temp,
-        'Ice Cream Sales (units)' : ice
     }
     
     if st.button('Predict'):
