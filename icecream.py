@@ -46,7 +46,11 @@ def main():
         predict = predict_data(user_data)
         predicted_val = round(float(predict[0]), 3)
         
-        st.success(f"Prediction : {predicted_val}")
+        st.success(f"Sales Prediction : {predicted_val}")
+        
+        # add to the collection
+        user_data['Predicted Sales'] = predicted_val
+        collection.insert_one(user_data)
         
 if __name__ == '__main__':
     main()
